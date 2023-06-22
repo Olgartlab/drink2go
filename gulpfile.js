@@ -68,7 +68,7 @@ export function createWebp () {
 }
 
 export function optimizeVector () {
-  return gulp.src(['source/img/**/*.svg', '!source/img/icons/**/*.svg'])
+  return gulp.src(['source/img/**/*.svg', '!source/img/icons/**/*.svg', '!source/img/icons/stack.svg'])
     .pipe(svgo())
     .pipe(gulp.dest('build/img'));
 }

@@ -1,0 +1,172 @@
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 44px;
+  padding-top: 20px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 70px;
+    padding-bottom: 90px;
+    justify-content: flex-end;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 0px;
+    padding-bottom: 116px;
+    align-items: flex-end;
+  }
+
+}
+
+.pagination__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 40px;
+  height: 40px;
+  background-color: #ffffff;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #7859cf;
+  text-decoration: none;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: 0;
+
+  @media (min-width: @tablet-width) {
+    min-width: 91px;
+    padding: 8px 20px;
+
+    &--forward {
+      min-width: 104px;
+    }
+  }
+}
+
+.pagination__button-icon {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.pagination__button-text {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+}
+
+.pagination__list {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    justify-content: flex-end;
+    width: 160px;
+    margin: 0 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 60px;
+  }
+
+}
+
+.pagination__list-item {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #7859cf;
+  background-color: @white;
+  text-decoration: none;
+  border-radius: 4px;
+  list-style: none;
+  position: relative;
+
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: auto;
+
+  }
+
+  &--current {
+    background-color: #f8f8f8;
+    color: #333333;
+  }
+}
+
+.pagination__list-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 4px;
+
+  &:hover,
+  &:focus {
+    background-color: #9070ec;
+    color: @white;
+  }
+
+  &:active {
+    background-color: #593cac;
+
+  }
+
+  &--disabled {
+    background-color: #e2e2e2;
+    color: @white;
+    cursor: not-allowed;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: #e2e2e2;
+      color: @white;
+      cursor: not-allowed;
+    }
+  }
+
+
+  &--current {
+    cursor: auto;
+    background-color: transparent;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: transparent;
+      color: #333333;
+      cursor: auto;
+    }
+  }
+}
+
+.pagination__list-icon {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.pagination__list-link span {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+}

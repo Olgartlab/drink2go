@@ -1,0 +1,78 @@
+.control {
+  position: relative;
+  cursor: pointer;
+}
+
+.control__input:disabled + .control {
+  color: #bdbdbd;
+  cursor: none;
+}
+
+.control__circle {
+  position: absolute;
+  left: -34px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  border: 2px solid #bdbdbd;
+
+}
+
+.control__oval {
+  position: absolute;
+  left: -49px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 24px;
+  background-color: #bdbdbd;
+  border-radius: 12px;
+
+  @media (min-width: @tablet-width) {
+    left: -53px;
+  }
+
+}
+
+.control__input:checked + .control__circle {
+  border: 2px solid #7859cf;
+}
+
+.control__input[type="checkbox"]:checked + .control__oval {
+  background-color: #7859cf;
+  outline: 2px solid #7859cf;
+  outline-offset: -2px;
+}
+
+.control__input[type="radio"]:checked + .control__circle::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 16px;
+    height: 16px;
+    background-color: #7859cf;
+    border-radius: 50%;
+    content: "";
+}
+
+.control__input[type="checkbox"]:checked + .control__oval::before {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 20px;
+  height: 20px;
+  background-color: @white;
+  border-radius: 50%;
+  content: "";
+}
+
+

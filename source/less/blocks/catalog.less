@@ -1,0 +1,251 @@
+.catalog {
+  background-color: #f8f8f8;
+}
+
+.catalog__filter-wrapper {
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    column-gap: 30px;
+  }
+}
+
+.catalog__filter-form {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 223px 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    grid-template-columns: 1fr;
+    width: 318px;
+    margin-bottom: 31px;
+    grid-column: 1/2;
+    grid-row: 1/3;
+  }
+}
+
+.catalog__title {
+  margin: 0;
+  margin-bottom: 4px;
+  padding: 0 20px;
+  padding-top: 50px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #7859cf;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 80px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 40px;
+    padding-top: 100px;
+  }
+}
+
+.catalog__subtitle {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+  margin: 0;
+  padding: 0 20px;
+  padding-bottom: 20px;
+
+
+  @media (min-width: @tablet-width) {
+    font-size: 42px;
+    line-height: 64px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 40px;
+  }
+}
+
+.catalog__filter-group {
+  border: none;
+  padding: 0;
+  margin: 0;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 30px;
+  }
+}
+
+.catalog__filter-price {
+  margin-bottom: 24px;
+  width: 280px;
+
+  @media (min-width: @tablet-width) {
+    width: 230px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 320px;
+    margin-bottom: 23px;
+    padding-top: 40px;
+  }
+}
+
+.catalog__sorting {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 40px;
+  padding-bottom: 10px;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    justify-content: flex-end;
+    padding-bottom: 25px;
+  }
+
+  @media (min-width: 1440px) {
+    grid-column: 2/3;
+    justify-self: end;
+  }
+}
+
+.catalog__sorting-title {
+  width: 107px;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+
+  @media (min-width: @tablet-width) {
+    padding-right: 10px;
+  }
+}
+
+.catalog__sorting-select {
+  width: 165px;
+  height: 32px;
+  padding: 4px 10px;
+  padding-right: 30px;
+  line-height: 24px;
+  font-weight: 600;
+  background-color: transparent;
+  color: #7859cf;
+  border: none;
+  background-image: url("../../img/images/select-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  appearance: none;
+}
+
+.catalog__list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+.catalog__buttons-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    grid-column: 1/-1;
+    grid-row: 2/3;
+    width: min-content;
+    min-width: 277px;
+    justify-self: center;
+    justify-content: space-between;
+  }
+
+  @media (min-width: 1440px) {
+    grid-column: 1/2;
+    grid-row: 4/5;
+    height: min-content;
+    min-height: 40px;
+    width: 100%;
+    margin: 0;
+    padding-top: 10px;
+  }
+}
+
+.catalog__filter-button {
+  width: 280px;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 8px;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: #9070ec;
+  }
+
+  &:active {
+    background-color: #593cac;
+  }
+
+  &:disabled {
+    background-color: #bdbdbd;
+    cursor: not-allowed;
+  }
+
+  &--apply {
+    color: @white;
+    background-color: #9070ec;
+    margin-bottom: 20px;
+
+    @media (min-width: @tablet-width) {
+      width: 137px;
+      margin-bottom: 0;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 149px;
+    }
+  }
+
+  &--reset {
+    color: #9070ec;
+    background-color: @white;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: @white;
+    }
+
+    &:disabled {
+      background-color: #e2e2e2;
+      color: @white;
+    }
+
+    @media (min-width: @tablet-width) {
+      width: 120px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 149px;
+    }
+  }
+}
+

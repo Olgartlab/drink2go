@@ -1,0 +1,118 @@
+.slider-item__text-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+
+  @media (min-width: @desktop-width) {
+    align-items: flex-start;
+    padding: 179px 10px 0 12px;
+  }
+}
+
+.slider-item__badge {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+  color: #7859cf;
+  text-transform: uppercase;
+  padding-top: 6px;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    text-align: left;
+  }
+}
+
+.slider-item__title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 48px;
+  letter-spacing: 0.02em;
+  text-align: center;
+  margin: 0;
+  padding-top: 4px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 56px;
+    line-height: 80px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 16px;
+    text-align: left;
+  }
+}
+
+.slider-item__description {
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  margin: 0;
+  padding: 10px 0 20px;
+  max-width: 280px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 32px;
+    padding: 15px 0 20px;
+    max-width: @tablet-width;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    text-align: left;
+    margin-bottom: 40px;
+    max-width: @desktop-width;
+  }
+}
+
+.slider-item__buy {
+  display: flex;
+  justify-content: space-between;
+  width: 230px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 0;
+  }
+}
+
+.slider-item__price-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slider-item__old-price {
+  font-size: 16px;
+  line-height: 32px;
+  color: #7859cf;
+  text-decoration: line-through;
+  padding-right: 6px;
+}
+
+.slider-item__price {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.slider-item__button {
+  font-size: 16px;
+  line-height: 24px;
+  padding: 8px 20px;
+  border: 0;
+  border-radius: 4px;
+  background-color: #7859cf;
+  color: @white;
+}
