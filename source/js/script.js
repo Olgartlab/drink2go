@@ -19,7 +19,6 @@ const swiper = new Swiper('.slider__container', {
 });
 
 /* Карта */
-
 const map = L.map('map').setView([59.968137, 30.316272], 13);
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
@@ -33,10 +32,9 @@ const customIcon = L.icon({
   iconAnchor: [18, 50],
 });
 
-
 const marker = L.marker([59.968137, 30.316272], {icon: customIcon}).addTo(map);
 
-
+/* Меню */
 let navMain = document.querySelector('.main-nav');
 let navToggle = document.querySelector('.main-nav__toggle');
 let siteList = document.querySelector('.site-list');
@@ -56,6 +54,5 @@ navToggle.addEventListener('click', function () {
     navMain.classList.remove('main-nav--opened');
     siteList.classList.remove('site-list--closed');
     siteList.classList.add('site-list--opened');
-
   }
 });

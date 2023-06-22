@@ -3,7 +3,6 @@
   position: relative;
 }
 
-
 .main-nav__list {
   margin: 0;
   padding: 0;
@@ -12,9 +11,7 @@
 }
 
 .main-nav__link {
-  color: #333;
-
-
+  color: #333333;
 
   &:hover,
   &:focus {
@@ -45,14 +42,13 @@
   border: none;
 
   &:active {
-    background-color:  #f0ebff;
+    background-color: #f0ebff;
   }
 
   @media (min-width: @tablet-width) {
     display: none;
   }
 }
-
 
 .main-nav--closed .main-nav__toggle {
   background-image: url("../../img/images/menu.svg");
@@ -72,5 +68,4 @@
   @media (min-width: @tablet-width) {
     display: flex;
   }
-
 }
